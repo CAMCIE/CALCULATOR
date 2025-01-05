@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CERILLO CALCULATOR</title>
+    <link rel="stylesheet" href="CAL.css">
+    <script src="calculator.js" defer></script>
+</head>
+<body>
+    
+        <div class="container">
+            <div class="calcu">
+                <Form>
+                <div class="screenContainer">
+                    <div>   
+                        
+                    </div>
+                    <div class="screen">
+                        <input type="text" name="display">
+                        
+                    </div>
+                </div>
+                    <div>
+                        <input type="button" value="BIN" onclick="convert('BIN')">
+                        <input type="button" value="HEX" onclick="convert('HEX')">
+                        <input type="button" value="OCT" onclick="convert('OCT')">
+                        <input type="button" value="DEC" onclick="convert('DEC')">
+                        <input type="button" value="MC" onclick="memoryClear()">
+                    </div>
+                    <div>
+                        <input type="button" value="AC" onclick="display.value = '' ">
+                        <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1) ">
+                        <input type="button" value="CLR" onclick="clearAll()">
+                        <input type="button" value="&divide;" onclick="display.value += '/' ">
+                        <input type="button" value="MR" onclick="memoryRecall()">
+
+                    </div>
+                    <div>
+                        <input type="button" value="7" onclick="display.value += '7' ">
+                        <input type="button" value="8" onclick="display.value += '8' ">
+                        <input type="button" value="9" onclick="display.value += '9' ">
+                        <input type="button" value="&times;" onclick="display.value += '*' ">
+                        <input type="button" value="M-" onclick="memorySubtract()">
+                    </div>
+                    <div>
+                        <input type="button" value="4" onclick="display.value += '4' ">
+                        <input type="button" value="5" onclick="display.value += '5' ">
+                        <input type="button" value="6" onclick="display.value += '6' ">
+                        <input type="button" value="&plus;" onclick="display.value += '+' ">
+                        <input type="button" value="M+" onclick="memoryAdd()">
+                    </div>
+                    <div>
+                        <input type="button" value="1" onclick="display.value += '1' ">
+                        <input type="button" value="2" onclick="display.value += '2' ">
+                        <input type="button" value="3" onclick="display.value += '3' ">
+                        <input type="button" value="&minus;" onclick="display.value += '-' ">
+                        <input type="button" value="MS" onclick="memoryStore()">
+                    </div>
+                    <div>
+                        <input type="button" value="%" onclick="display.value += '%' ">
+                        <input type="button" value="0" onclick="display.value += '0' ">
+                        <input type="button" value="." onclick="display.value += '.' ">
+                        <input type="button" value="=" onclick="display.value = eval(display.value) ">
+                        <input type="button" value="CE" onclick="clearEntry()">
+                    </div>
+                    
+
+                </Form>
+            </div>
+        </div>
+    
+</body>
+</html>
